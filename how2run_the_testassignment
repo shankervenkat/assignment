@@ -8,4 +8,11 @@ say  chmod 755  testassignement
 
 run the script  as shown below
 
-./testassignment   or  /bin/bash   ~/testassignment
+./testassignment   or  /bin/bash   ~/testassignmentp
+
+then
+
+the user is prompted with the Menu and asked to choose a menu-option,
+based on the option choosen the particular command is run and after the running the menu-option
+returns back to the Menu ...this process is repeated until the user choose's the option or choice 8
+when the loop is broken and the program exits and control is returned to the shell prompt.
