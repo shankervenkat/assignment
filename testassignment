@@ -22,7 +22,7 @@ echo "select the operation to perform:   1) Change Password   \n
 
 PS3='Please enter your choice: '
 
-options=("1" "2" "3" "4" "5" "6" "7" "EXit")
+options=("1" "2" "3" "4" "5" "6" "7" "8")
 
 select opt in "${options[@]}"
 
@@ -91,16 +91,17 @@ do
             ;;                 #ps -A |grep  App
 
 
-        "8") echo "Exit"
-            break
-            ;;
-        *) echo invalid option;;
+        "8") echo "Exiting ..."
+             break
+             ;;
+ 
+         *) echo invalid option;;
     esac
 
 done
 
 
-if [ $opt = "Exit" ]; then
+if [ $opt = "8" ]; then
     break
 fi
 
