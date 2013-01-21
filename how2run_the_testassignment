@@ -1,7 +1,11 @@
+place the  testassignment  file  in the user's folder
+
+change to the user's folder(say the home directory of the user)
+
 change the file permissions to the desired effect
 
 say  chmod 755  testassignement
 
 run the script  as shown below
 
-./testassignment   
+./testassignment   or  /bin/bash   ~/testassignment
