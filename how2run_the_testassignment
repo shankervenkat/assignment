@@ -1,0 +1,7 @@
+change the file permissions to the desired effect
+
+say  chmod 755  testassignement
+
+run the script  as shown below
+
+./testassignment   
