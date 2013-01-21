@@ -1,6 +1,6 @@
 place the  testassignment  file  in the user's folder
 
-change to the user's folder(say the home directory of the user)
+change to the user's folder(say the home directory of the user) i.e.  cd  ~
 
 change the file permissions to the desired effect
 
