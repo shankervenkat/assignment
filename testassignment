@@ -84,7 +84,9 @@ do
             ;;
 
 
-	"7") echo "facility to kill an App"
+	"7") echo "facility to kill an App, enter the pid of the App"
+
+             read  pid
 
              kill -9  pid      #where pid is the process-id of the app 
                                #to find the pid of the app run            
@@ -95,7 +97,7 @@ do
              break
              ;;
  
-         *) echo invalid option;;
+         *) echo "invalid option, choose a value between 1 to 8" ;;
     esac
 
 done
