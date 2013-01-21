@@ -1,0 +1,118 @@
+#!/bin/bash
+###Bash Shell Scripting/Whiptail can also be used to implement a menu which is not used here
+
+while true
+do
+
+echo "select the operation to perform:   1) Change Password   \n
+                                         
+                                         2)See the disk space \n
+
+                                         3)Login to other box using ssh  \n
+
+                                         4)Show all Service running  \n
+
+                                         5)Show all ports opened    \n
+
+                                         6)Show all java apps running \n
+
+                                         7)Facility to kill a  app \n
+
+                                         8)Exit"
+
+PS3='Please enter your choice: '
+
+options=("1" "2" "3" "4" "5" "6" "7" "EXit")
+
+select opt in "${options[@]}"
+
+do
+    case $opt in
+        "1")
+
+            ###Assumption password being changed is for the current user.
+            echo "Enter New Password"
+
+            read  password
+
+            passwd password
+            ;;
+
+
+
+        "2")echo "Listing disk space"
+
+            df -h  or df -k   #for listing free disk space
+ 
+            du -sh            #for listing used-up disk space     
+            ;;
+
+       
+            
+        "3")###presuming necessary configuration for ssh enablement is in plach
+
+            echo "Enter the name or IP addr of the host to login"
+
+            read  host
+
+            ssh   host
+            ;;
+
+
+
+  "4") echo "Listing all the running services"
+
+	     chkconfig --list | grep 3:on   ###also the command #service --status-all list all services and their statusa
+            
+            ;;
+
+
+
+        "5")echo "Here is the list of all running ports"
+
+	    netstat -tulpn
+
+             ;;
+
+
+        "6") echo "Listing all java apps running"     
+
+             jps  #listing all java apps running under a specific user
+
+             ps -ef|grep java #should list all java apps running system wide
+	
+            ;;
+
+
+	"7") echo "facility to kill an App"
+
+             kill -9  pid      #where pid is the process-id of the app 
+                               #to find the pid of the app run            
+            ;;                 #ps -A |grep  App
+
+
+        "Exit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+
+done
+
+
+
+
+done
+
+---------------------------------------------------------------------
+!#/bin/bash
+echo "select the operation *********  1)operation 1 2)operation 2 3)operation 3 4)operation 4 "
+
+read n
+case $n in
+    1) commands for opn 1;;
+    2) commands for opn 2;;
+    3) commands for opn 3;;
+    4) commands fo  opn 4;;
+    *) invalid option;;
+esac
