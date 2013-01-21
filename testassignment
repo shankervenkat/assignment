@@ -91,7 +91,7 @@ do
             ;;                 #ps -A |grep  App
 
 
-        "Exit")
+        "8") echo "Exit"
             break
             ;;
         *) echo invalid option;;
